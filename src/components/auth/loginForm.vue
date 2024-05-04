@@ -1,7 +1,7 @@
 <template>
-    <Card class="max-w-lg">
+    <Card class="max-w-lg select-none">
         <template #header>
-            <img alt="user header" src="../../assets/329182497_580658887303089_6817430973110470755_n.jpg" />
+            <img alt="user header" src="../../assets/329182497_580658887303089_6817430973110470755_n.jpg" class=" pointer-events-none" />
         </template>
         <template #title>IDBI Login</template>
         <template #subtitle>Ingrese su usuario</template>
@@ -10,13 +10,12 @@
 
                 <div class="flex flex-col gap-2">
                     <label for="username">Username</label>
-                    <InputText id="username" aria-describedby="username-help" />
+                    <InputText id="username" aria-describedby="username" />
                 </div>
-
+                
                 <div class="flex flex-col gap-2">
                     <label for="password">Password</label>
-                    <Password id="password" />
-                    <!-- <InputText type="password" id="username" aria-describedby="username-help" /> -->
+                    <InputText type="password" id="password" aria-describedby="password" />
                 </div>
 
             </div>
