@@ -13,6 +13,7 @@ declare module 'vue' {
     DataTable: typeof import('primevue/datatable')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconField: typeof import('primevue/iconfield')['default']
+    Image: typeof import('primevue/image')['default']
     InicidentTable: typeof import('./src/components/Incidents/InicidentTable.vue')['default']
     InputIcon: typeof import('primevue/inputicon')['default']
     InputText: typeof import('primevue/inputtext')['default']
