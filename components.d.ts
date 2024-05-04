@@ -8,8 +8,10 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('primevue/button')['default']
+    Card: typeof import('primevue/card')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     InputText: typeof import('primevue/inputtext')['default']
+    LoginForm: typeof import('./src/components/auth/loginForm.vue')['default']
     Password: typeof import('primevue/password')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
