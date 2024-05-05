@@ -12,7 +12,7 @@ import './style.css';
 // import 'primevue/resources/themes/lara-dark-teal/theme.css'
 // import 'primevue/resources/themes/aura-light-green/theme.css';
 import 'primevue/resources/themes/lara-dark-green/theme.css';
-
+import 'primeicons/primeicons.css';
 
 
 const pinia = createPinia()

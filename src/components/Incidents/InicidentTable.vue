@@ -1,11 +1,12 @@
 <template>
     <div class="card rounded-md">
-        <DataTable :value="incidents">
+        <DataTable :value="incidents" filterDisplay="menu" paginator :rows="4" dataKey="id" :globalFilterFields="['name', 'country.name', 'representative.name', 'balance', 'status']" >
             <template #header>
-                <div class="flex justify-content-end">
+                <div class="flex justify-end gap-3">
+                    <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined  />
                     <IconField iconPosition="left">
                         <InputIcon>
-                            <i class="pi pi-search" />
+                            <i class="pi pi-search " />
                         </InputIcon>
                         <InputText placeholder="Keyword Search" />
                     </IconField>
@@ -14,20 +15,11 @@
             <template #empty> No customers found. </template>
             <template #loading> Loading customers data. Please wait. </template>
 
-            <Column field="name" header="Name" style="min-width: 12rem">
-                <template #body="{ data }">
-                    {{ data.subject }}
-                    <!-- <Button @click="()=>{console.log(data)}">PIPI</Button> -->
-                </template>
-                <template #filter="{ filterModel, filterCallback }">
-                    <InputText v-model="filterModel.value" type="text" @input="filterCallback()" class="p-column-filter" placeholder="Search by name" />
-                </template>
-            </Column>
-
+          
             <Column field="proceso" header="Proceso" style="min-width: 12rem">
                 <template #body="{ data }">
                     {{ data.status }}
-                    <!-- <Button @click="()=>{console.log(data)}">PIPI</Button> -->
+                    <!-- <Tag :value="data.status" class=" text-xl font-semibold text-white" /> -->
                 </template>
                 <template #filter="{ filterModel, filterCallback }">
                     <InputText v-model="filterModel.value" type="text" @input="filterCallback()" class="p-column-filter" placeholder="Search by name" />
@@ -56,7 +48,7 @@
 
             <Column field="incidente" header="Incidente" style="min-width: 12rem">
                 <template #body="{ data }">
-                    {{ data.details }}
+                    {{ data.subject }}
                     <!-- <Button @click="()=>{console.log(data)}">PIPI</Button> -->
                 </template>
                 <template #filter="{ filterModel, filterCallback }">
@@ -87,7 +79,7 @@
             <Column field="imagen" header="Imagen" style="min-width: 12rem">
                 <template #body="{ data }">
 
-                    <Image :src="data.imageUrl"></Image>
+                    <Image :src="data.imageUrl" class=" rounded-sm"></Image>
                     <!-- <Button @click="()=>{console.log(data)}">PIPI</Button> -->
                 </template>
                 <template #filter="{ filterModel, filterCallback }">
@@ -118,11 +110,31 @@ import { useIncidentStore } from '../../stores/incidentStore';
 export default {
     data() {
         return {
-
+            // filters: null,
         }
     },
     methods: {
-        ...mapActions(useIncidentStore, ['fetchIncidents'])
+        ...mapActions(useIncidentStore, ['fetchIncidents']),
+
+        getSeverity(status:any) {
+            switch (status) {
+                case 'unqualified':
+                    return 'danger';
+
+                case 'qualified':
+                    return 'success';
+
+                case 'new':
+                    return 'info';
+
+                case 'negotiation':
+                    return 'warning';
+
+                case 'renewal':
+                    return null;
+            }
+        },
+       
     },
     computed: {
         ...mapState(useIncidentStore, ["incidents"])

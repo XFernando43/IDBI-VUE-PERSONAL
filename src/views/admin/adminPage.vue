@@ -2,6 +2,7 @@
 
     <div class="m-3 p-2">
         <InicidentTable />
+        <Test/>
     </div>
         
 
@@ -9,10 +10,11 @@
 
 <script lang="ts">
 import InicidentTable from '../../components/Incidents/InicidentTable.vue';
-
+import Test from '../../components/test.vue';
     export default{
         components:{
-            InicidentTable
+            InicidentTable,
+            Test
         }
     }
 </script>
