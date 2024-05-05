@@ -1,6 +1,7 @@
 <template>
 
-    <div class="m-3 p-2">
+    <div class="m-3 p-2 flex flex-col gap-2 justify-center items-center">
+        <FilterTable/>
         <InicidentTable />
         <Test/>
     </div>
@@ -10,11 +11,13 @@
 
 <script lang="ts">
 import InicidentTable from '../../components/Incidents/InicidentTable.vue';
+import FilterTable from '../../components/Incidents/filterTable.vue';
 import Test from '../../components/test.vue';
     export default{
         components:{
             InicidentTable,
-            Test
+            Test,
+            FilterTable
         }
     }
 </script>
