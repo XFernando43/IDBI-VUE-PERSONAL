@@ -18,6 +18,7 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconField: typeof import('primevue/iconfield')['default']
     Image: typeof import('primevue/image')['default']
+    IncidentsState: typeof import('./src/components/Incidents/incidentsState.vue')['default']
     InicidentTable: typeof import('./src/components/Incidents/InicidentTable.vue')['default']
     InputIcon: typeof import('primevue/inputicon')['default']
     InputNumber: typeof import('primevue/inputnumber')['default']
