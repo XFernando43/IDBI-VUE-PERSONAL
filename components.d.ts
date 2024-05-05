@@ -7,24 +7,30 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Avatar: typeof import('primevue/avatar')['default']
     Button: typeof import('primevue/button')['default']
     Calendar: typeof import('primevue/calendar')['default']
     Card: typeof import('primevue/card')['default']
     Column: typeof import('primevue/column')['default']
     DataTable: typeof import('primevue/datatable')['default']
     Dropdown: typeof import('primevue/dropdown')['default']
+    FileUpload: typeof import('primevue/fileupload')['default']
     FilterTable: typeof import('./src/components/Incidents/filterTable.vue')['default']
     FloatLabel: typeof import('primevue/floatlabel')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconField: typeof import('primevue/iconfield')['default']
     Image: typeof import('primevue/image')['default']
+    IncidentDetail: typeof import('./src/components/Incidents/incidentDetail.vue')['default']
+    IncidentForm: typeof import('./src/components/users/IncidentForm.vue')['default']
     IncidentsState: typeof import('./src/components/Incidents/incidentsState.vue')['default']
     InicidentTable: typeof import('./src/components/Incidents/InicidentTable.vue')['default']
     InputIcon: typeof import('primevue/inputicon')['default']
     InputNumber: typeof import('primevue/inputnumber')['default']
     InputText: typeof import('primevue/inputtext')['default']
     LoginForm: typeof import('./src/components/auth/loginForm.vue')['default']
+    Menu: typeof import('primevue/menu')['default']
     MultiSelect: typeof import('primevue/multiselect')['default']
+    Panel: typeof import('primevue/panel')['default']
     Password: typeof import('primevue/password')['default']
     ProgressBar: typeof import('primevue/progressbar')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -33,6 +39,7 @@ declare module 'vue' {
     Slider: typeof import('primevue/slider')['default']
     Tag: typeof import('primevue/tag')['default']
     Test: typeof import('./src/components/test.vue')['default']
+    Textarea: typeof import('primevue/textarea')['default']
     TriStateCheckbox: typeof import('primevue/tristatecheckbox')['default']
   }
 }

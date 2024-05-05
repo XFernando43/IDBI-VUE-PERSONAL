@@ -1,6 +1,6 @@
 <template>
 
-    <div class="p-4 flex flex-row gap-5">
+    <div class="py-3 flex flex-col sm:flex-col md:flex-row lg:flex-row gap-5">
 
             <FloatLabel>
                 <label for="from">Desde</label>
@@ -13,10 +13,6 @@
                 <Calendar id="to" v-model="buttondisplay2" showIcon :showOnFocus="false" />
             </FloatLabel>
 
-            <FloatLabel>
-                <label for="to">Hasta</label>
-                <Calendar id="to" v-model="buttondisplay2" showIcon :showOnFocus="false" />
-            </FloatLabel>
 
             <IconField iconPosition="left">
                 <InputIcon class="pi pi-search"> </InputIcon>

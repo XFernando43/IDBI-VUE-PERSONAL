@@ -12,6 +12,7 @@ const config = {
 export const useIncidentStore = defineStore("incident", {
   state: () => ({
     incidents: [] as IincidentResponse[],
+    incident: {} as IincidentResponse,
   }),
 
   actions: {
@@ -27,5 +28,16 @@ export const useIncidentStore = defineStore("incident", {
             console.error("Error fetching incidents:", error);
           }
     },
+
+    async fetchIncidetById(){
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL_BASE}/incident/getIncident/3`, config);
+        const data = response.data;
+        this.incident = data;
+      } catch (error) {
+        console.error("Error fetching incidents:", error);
+      }
+    }
+
   },
 });
