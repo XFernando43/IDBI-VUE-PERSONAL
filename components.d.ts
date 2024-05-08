@@ -22,6 +22,7 @@ declare module 'vue' {
     Image: typeof import('primevue/image')['default']
     IncidentDetail: typeof import('./src/components/Incidents/incidentDetail.vue')['default']
     IncidentForm: typeof import('./src/components/users/IncidentForm.vue')['default']
+    IncidentPanel: typeof import('./src/components/Incidents/IncidentPanel.vue')['default']
     IncidentsState: typeof import('./src/components/Incidents/incidentsState.vue')['default']
     InicidentTable: typeof import('./src/components/Incidents/InicidentTable.vue')['default']
     InputIcon: typeof import('primevue/inputicon')['default']
