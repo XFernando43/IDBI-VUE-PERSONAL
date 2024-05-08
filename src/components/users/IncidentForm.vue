@@ -1,5 +1,5 @@
 <template>
-    <Card class="max-w-lg select-none">
+    <Card class=" w-auto select-none ">
         <template #header>
             <h1 class="text-center">Crear Nuevo Incidente</h1>
         </template>
@@ -15,7 +15,7 @@
                 </div>
                 
                 <div class="flex flex-col gap-2">
-                    <label for="password">Password</label>
+                    <label for="password">Servicio</label>
                     <Dropdown v-model="selectedCity" :options="status" optionLabel="name" placeholder="Select status"
                     class="w-full md:w-14rem" />
                 </div>

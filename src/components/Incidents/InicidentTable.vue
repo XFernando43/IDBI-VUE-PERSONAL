@@ -1,6 +1,6 @@
 <template>
 
-    <div class=" max-w-screen-2xl">
+    <div class="w-auto h-auto">
 
         <IncidentsState/>        
         <FilterTable/>
