@@ -8,7 +8,8 @@
 </template>
 
 <script lang="ts">
-import LoginForm from '../components/auth/loginForm.vue';
+import LoginForm from '../../components/auth/loginForm.vue';
+
 
 export default {
   components: {

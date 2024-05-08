@@ -6,8 +6,9 @@
 
 
 <script lang="ts">
+import IncidentPanel from '../../components/Incidents/IncidentPanel.vue';
 
-import IncidentPanel from '../components/Incidents/IncidentPanel.vue';
+
 
 export default {
     components: {

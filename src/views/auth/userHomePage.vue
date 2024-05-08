@@ -13,8 +13,8 @@
 </template>
 
 <script lang="ts">
-import InicidentTable from '../components/Incidents/InicidentTable.vue';
-import IncidentForm from '../components/users/IncidentForm.vue';
+import IncidentsState from '../../components/Incidents/incidentsState.vue';
+import IncidentForm from '../../components/users/IncidentForm.vue';
 
 
 export default {
@@ -22,7 +22,7 @@ export default {
     },
     components: {
         IncidentForm,
-        InicidentTable
+        IncidentsState
     }
 }
 
